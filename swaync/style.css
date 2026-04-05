@@ -1,0 +1,44 @@
+/* TRANSFORMA EM LAYOUT HORIZONTAL */
+.notification {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #151718;
+}
+
+/* CONTEÚDO (texto) */
+.notification-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* REMOVE CORPO (fica igual GNOME compacto) */
+.body {
+    display: none;
+}
+
+/* ÍCONE */
+.image {
+    margin: 0;
+}
+
+/* BOTÃO INLINE (lado direito) */
+.notification-action {
+    margin-left: auto;
+}
+
+/* DEIXA O CARD BAIXO (altura pequena) */
+.notification-background {
+    border-radius: 14px;
+    padding: 4px;
+}
+
+.control-center {
+    background: #151718; /* cor sólida */
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+    margin: 10px;
+}

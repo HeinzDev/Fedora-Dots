@@ -1,0 +1,192 @@
+{
+  "layer": "top",
+  "position": "left",
+  "mod": "dock",
+  "margin-left": 4,
+  "margin-right": 0,
+  "margin-top": 6,
+  "margin-bottom": 6,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "reload_style_on_change": true,
+
+  "modules-left": ["disk", "clock", "group/expand-5", "group/expand-4"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "custom/colorpicker",
+    "custom/ss",
+    "custom/cliphist",
+    "custom/expand",
+    "tray",
+    "group/volume",
+    "custom/notification",
+    "custom/trayfix"
+  ],
+
+  "disk": {
+    "format": "",
+    "on-click": "/home/heinz/.config/rofi/launchers/type-2/launcher.sh",
+    "on-click-right": "killall rofi"
+  },
+
+  "clock": {
+    "format": "{:%I\n%M}",
+    "rotate": 0,
+    "on-click": "/usr/local/bin/ags -t ActivityCenter",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+
+  "group/expand-5": {
+    "orientation": "vertical",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "not-power",
+      "transition-to-right": true,
+      "click-to-reveal": true
+    },
+    "modules": ["custom/music", "custom/media", "memory"]
+  },
+
+"custom/music": {
+  "format": "{icon}",
+  "tooltip-format": "{text}",
+  "return-type": "json",
+  "interval": 2,
+  "exec": "playerctl metadata --format '{\"text\": \"{{artist}} - {{title}}\", \"alt\": \"{{status}}\"}' 2>/dev/null || echo '{\"text\": \"\", \"alt\": \"Stopped\"}'",
+  "format-icons": {
+    "Playing": "",
+    "Paused": "",
+    "Stopped": ""
+  },
+  "on-click": "playerctl play-pause"
+},
+
+  "group/expand-4": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "not-power",
+      "transition-to-right": true,
+      "click-to-reveal": true
+    },
+    "modules": ["custom/cava-internal"]
+  },
+
+  "custom/cava-internal": {
+    "exec": "~/.local/bin/cava-internal.sh",
+    "tooltip": false,
+    "rotate": 270,
+    "format": "{}",
+    "return-type": "json"
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+
+  "custom/colorpicker": {
+    "exec": "~/.config/hypr/scripts/tools/expand wall",
+    "format": "",
+    "on-click": "/home/heinz/.config/hypr/scripts/colorpicker"
+  },
+
+  "custom/ss": {
+    "format": "󰋱",
+    "exec": "~/.config/hypr/scripts/tools/expand ss-icon",
+    "on-click": "/home/heinz/.config/hypr/scripts/screenshot"
+  },
+
+  "custom/expand": {
+    "on-click": "~/.config/hypr/scripts/expand_toolbar",
+    "format": "{}",
+    "exec": "~/.config/hypr/scripts/tools/expand arrow-icon"
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 3
+  },
+  
+  "custom/tray-fix": {
+  "format": " ",
+  "interval": "once",
+  "tooltip": false
+  },
+
+  "group/volume": {
+    "orientation": "vertical",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "not-power",
+      "transition-to-left": true,
+      "click-to-reveal": true
+    },
+    "modules": ["pulseaudio/slider"]
+  },
+
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "scroll-step": 1,
+    "orientation": "vertical"
+  },
+
+  "custom/notification": {
+    "tooltip": false,
+    "rotate": 0,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󰅸",
+      "none": "󰂜",
+      "dnd-notification": "󰅸",
+      "dnd-none": "󱏨",
+      "inhibited-notification": "󰅸",
+      "inhibited-none": "󰂜",
+      "dnd-inhibited-notification": "󰅸",
+      "dnd-inhibited-none": "󱏨"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click-right": "swaync-client -d -sw",
+    "on-click": "swaync-client -t -sw",
+    "escape": true
+  },
+
+"custom/cliphist": {
+  "format": "",
+  "interval": 86400,
+  "on-click": "sleep 0.1 && rofi -config ~/.config/rofi/config.rasi -theme ~/.config/rofi/theme.rasi -modi 'clipboard:/home/heinz/.config/rofi/scripts/cliphist-rofi-img' -show clipboard -show-icons",
+  "on-click-right": "sleep 0.1 && /home/heinz/.config/hypr/scripts/cliphist.sh d",
+  "on-click-middle": "sleep 0.1 && /home/heinz/.config/hypr/scripts/cliphist.sh w",
+  "tooltip": true
+}
+}

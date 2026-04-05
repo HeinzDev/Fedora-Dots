@@ -1,0 +1,339 @@
+@import url("/home/heinz/.cache/material-you/waybar-colors.css");
+* {
+    font-family: "JetBrains Mono Nerd Font";
+    /*font-family: "JetBrainsMono Nerd Font";*/
+    font-weight: bold; 
+    font-size: 15px;
+}
+menu,
+tooltip {
+  border-radius: 18px;
+  padding: 2px;
+  border: 1px solid @foreground;
+  background: alpha(@background, 0.95);
+  color: @foreground;
+}
+#custom-notification {
+  font-family: "JetBrains Mono Nerd Font";
+  font-size: 17px;
+  color: @foreground;
+  margin: 0px 6px 6px 6px;
+  padding:2px 10px 5px 5px;
+  background-color: alpha(@color4,0.3);
+ border-radius:0px 0px 6px 6px;
+}
+
+window#waybar {
+  background: #151718; /* 191925 Caso @background seja uma variável */
+  /* Ou, caso @backg seja uma cor hex, substitua por algo como #RRGGBB */
+  border: 0px solid @foreground;
+  border-radius: 12px;
+}
+
+
+#workspaces button {
+    font-weight: normal;
+    background: rgba(23, 23, 23, 0.0);
+        color: #2F302D;
+}
+#workspaces button {
+    padding: 0px 0px;
+    margin: 4px 11 0 11px;
+    padding-top:0px;
+    padding-bottom:0px;
+    border-radius: 15px;
+    border: 0px;
+    color: @color4;
+    background-color: @color4;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.3;
+}
+
+#workspaces button.active {
+    color: @color14;
+    background: @color14;
+    border-radius: 15px;
+    min-height: 35px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#workspaces button:hover {
+    color: @background;
+    background: @background;
+    border-radius: 15px;
+    opacity:0.5;
+}
+
+
+
+    #workspaces button:hover {
+        color: @foreground;
+        background: @foreground;
+        border-radius: 15px;
+        opacity:0.5;
+    }
+
+#taskbar button:hover {
+    background: @wb-hvr-bg;
+    color: @wb-hvr-color;
+    animation: tb_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#tray menu * {
+    min-height: 16px;
+    font-weight: bold;
+    font-size: 13px;
+    color: @foreground;
+    
+}
+#tray{
+    color: @foreground;
+background-color: alpha(@color4,0.3);
+margin: 0 6 0 6px;
+font-weight: normal;
+font-size: 16px;
+padding-top: 5px;
+padding-right: 5px;
+border-radius:6 6 0 0px;
+}
+
+#tray menu separator {
+    min-height: 10px;
+}
+
+#custom-spacer{
+opacity: 0.0;
+}
+#custom-smallspacer{
+opacity: 0.0;
+}
+
+#clock{
+    color: @foreground;
+    font-size: 15px;
+    font-weight: 900;
+   font-family: "JetBrains Mono Nerd Font";
+    background:alpha(@color4,0.3);
+    opacity: 1;
+    margin: 6px;
+    padding-left: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 6px;
+    border: none;
+    
+}
+#pulseaudio{
+    background-color: alpha(@color4,0.3);
+font-weight: normal;
+font-size: 15px;
+color: @foreground;
+padding-top: 4px;
+margin: 0 6 0 6px;
+}
+#custom-gpuinfo,
+#custom-keybindhint,
+#language,
+#custom-colorpicker,
+#mode,
+#idle_inhibitor,
+#custom-expand,
+#custom-expand2,
+#custom-cycle_wall,
+#custom-ss,
+#custom-dynamic_pill,
+#custom-music{
+font-weight: normal;
+font-size: 22px;
+color: #B1AC8F;
+}
+#mpris{
+color: #B1AC8F;
+animation: repeat;
+	animation-name: blink;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: #262827;
+        
+    }
+}
+
+#clock:hover,
+#custom-music:hover,
+#custom-icon1:hover,
+#custom-icon2:hover,
+#custom-icon3:hover,
+#custom-icon4:hover,
+#custom-icon5:hover,
+#custom-icon6:hover,
+#custom-power:hover{
+    background-color: alpha(@color4,1.0);
+    transition: all 0.3s ease-in-out; 
+}
+#custom-music{
+    background-color: alpha(@color4,0.3);
+    font-weight: normal;
+    min-width: 00px;
+    font-size: 10px; 
+    border-radius: 6px;
+    color: @foreground;
+    margin: 2 6 0 6px;
+    padding:4px;
+
+}
+#custom-colorpicker {
+    color: @foreground;
+    font-size: 13px;
+    padding: 0 0 10 0px
+}
+#custom-expand {
+    color: @foreground;
+    font-size: 15px;
+    padding: 0 4 5 1px
+    
+}
+#custom-ss {
+    color: @foreground;
+    font-size: 12px;
+    padding: 0 0 10 0px
+}
+#custom-dynamic_pill_{
+    color: @foreground;
+    font-size: 15px;
+}
+#network{
+color: @foreground;
+background-color: alpha(@color4,0.5);
+margin: 0 6 0 6px;
+font-weight: normal;
+font-size: 16px;
+padding-top: 5px;
+padding-left: 0px;
+border-radius:6 6 0 0px;
+}
+#custom-notifications,
+#custom-theme,
+#custom-menu{
+color: #B1AC8F;
+background:  rgba(23, 23, 23, 0.0);
+margin: 0px 0px 0px 0px;
+    padding-left: 1px;
+    padding-right: 1px;
+    opacity: 0.1
+}
+#tray,
+#custom-updates,
+#custom-wallchange,
+#custom-wbar,
+#window{
+font-family: "JetBrains Mono Nerd Font";
+color: #7DAEA3;
+padding-left: 5px;
+}
+#custom-l_end,
+#custom-r_end,
+#custom-sl_end,
+#custom-sr_end,
+#custom-rl_end,
+#cava,
+#disk,
+#custom-rr_end {
+font-weight: normal;
+    color: #E8EDF0;
+    background:  rgba(23, 23, 23, 0.0);
+    opacity: 1;
+    margin: 0px 0px 0px 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+  ;
+    
+}
+#pulseaudio-slider {
+    background-color: alpha(@color4, 0.3);
+    margin: 0 6px 0 6px;
+    padding: 0 0 10px 0;
+}
+
+#pulseaudio-slider slider {
+    background: #A1BDCE;
+    background-color: transparent;
+    box-shadow: none;
+    margin: -30px;
+}
+
+/* Fundo cinza (trough) */
+#pulseaudio-slider trough {
+    min-width: 11px;           /* um pouco mais largo ajuda */
+    min-height: 92px;
+    margin: 8px -4px -4px -4px;
+
+    border-radius: 9999px;
+    background: alpha(@background, 0.8);
+}
+
+/* Parte que preenche (highlight) - aqui está o principal ajuste */
+#pulseaudio-slider highlight {
+    border-radius: 9999px;
+    background-color: @color14;
+
+    /* Força o arredondamento no topo mesmo quando o highlight é pequeno */
+    margin-top: 0 ;
+    padding-top: 0;
+    
+    /* Garante que o highlight não seja cortado */
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+}
+
+/* Seu cava (mantido limpo) */
+#custom-cava-internal {
+    background-color: alpha(@color6, 0.0);
+    border-radius: 6px;
+    font-size: 15px;
+    color: @color14;
+    margin: 30px 6px 0px 0px;
+    padding: 3px 4px 20px 10px;
+}
+
+
+
+#custom-cava-internal {
+    background-color: alpha(@color6, 0.0);
+    border-radius: 6px;
+    font-size: 15px;
+    color: @color14;
+    margin: 10px 6px 0 0px;
+    padding: 3px 4px 20px 10px;    
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#taskbar {
+    padding: 1px;
+}
+#disk {
+    background-color: alpha(@color6,0.0);
+    border-radius: 6px;
+    font-size: 25px;
+    color: @color14;
+    margin: 0 6 0 0px;
+    padding:0 0 2 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+/* Style for launchers */
+#group-minimized {
+    border-left: solid;
+    border-left-width: 0.5;
+}
+
+
