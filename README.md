@@ -7,7 +7,7 @@
 <p align="center"><img src="https://i.imgur.com/TpmI0tj.png"></p>
 <p align="center"><img src="https://i.imgur.com/Qp2YImE.png"></p>
 
-## Estrutura
+## Directories
 
 
 ```
@@ -93,7 +93,7 @@ $ ./install.sh
 ## 
 <div id="header" align="center">
   <a href="https://github.com/HeinzDev/">
-    <img src="https://i.imgur.com/RtsYtRt.png" width="100"/>
+    <img src="https://i.imgur.com/OojM6I5.png" width="100"/>
   </a>
   <a href="https://github.com/HeinzDev/">
     <h3>HeinzDev</h3>  
