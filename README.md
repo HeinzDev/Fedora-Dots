@@ -7,7 +7,7 @@
 <p align="center"><img src="https://i.imgur.com/TpmI0tj.png"></p>
 <p align="center"><img src="https://i.imgur.com/Qp2YImE.png"></p>
 
-## Directories
+## 📁 Structure
 
 
 ```
@@ -67,7 +67,7 @@
 <p align="center"><img src="https://i.imgur.com/xvo2g24.png"></p>
 <p align="center"><img src="https://i.imgur.com/lPqJliG.png"></p>
 
-
+It can be accessed with the hotkeys SUPER + F5–F7, or modified in the ```binds.conf``` file.
 
 ### Install
 
@@ -83,7 +83,7 @@ $ cp -r cava hypr kitty rofi swaync rofi ~/.config
 $ mkdir ~/.cache && cp -r material-you ~/.cache
 $ mkdir ~/Apps && cp -r hyprchange ~/Apps
 ```
-ou
+or
 
 ```bash
 $ chmod +x install.sh
