@@ -1,7 +1,6 @@
 #!/usr/bin/bash
 TEMP=/tmp/current_wall
 
-files=(/home/alien/Documents/colorswall/gruvwalls/*)
 
 hypr=~/.config/hypr
 scripts=$hypr/scripts
