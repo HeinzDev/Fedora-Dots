@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
 
-## Author  : Aditya Shakya (adi1090x)
-## Github  : @adi1090x
-#
 ## Applets : Power Menu
 
 # Import Current Theme
-source "$HOME"/.config/rofi/applets/shared/theme.bash
-theme="$type/$style"
+#source "$HOME"/.config/rofi/applets/shared/theme.bash
+theme="$HOME/.config/rofi/applets/type-2/style-2.rasi"
 
 # Theme Elements
 prompt="`hostname`"
@@ -34,13 +31,13 @@ if [[ "$layout" == 'NO' ]]; then
 	no=' No'
 else
 	option_1=""
-	option_2=""
+	option_2="󰗽"
 	option_3=""
 	option_4=""
 	option_5=""
 	option_6=""
-	yes=''
-	no=''
+	yes=''
+	no=''
 fi
 
 # Rofi CMD

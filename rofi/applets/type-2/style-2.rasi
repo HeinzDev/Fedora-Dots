@@ -140,28 +140,28 @@ element-text {
 
 element normal.normal,
 element alternate.normal {
-    background-color:            var(background);
-    text-color:                  var(foreground);
+    background-color:            @background;
+    text-color:                  @foreground;
 }
 element normal.urgent,
 element alternate.urgent,
 element selected.active {
-    background-color:            var(background);
-    text-color:                  var(urgent);
-    border-color: var(urgent);
+    background-color:            @background;
+    text-color:                  @foreground;
+    border-color: @foreground;
     border: 0px solid;
 }
 element normal.active,
 element alternate.active,
 element selected.urgent {
-    background-color:            var(background);
-    text-color:                  var(active);
-    border-color: var(active);
+    background-color:            @background;
+    text-color:                  @active;
+    border-color: @active;
     border: 0px solid;
 }
 element selected.normal {
-    background-color:            var(background);
-    text-color:                  var(selected);
-    border-color: var(selected);
+    background-color:            @background;
+    text-color:                  @selected;
+    border-color: @selected;
     border: 0px solid;
 }
